@@ -1,3 +1,6 @@
+// ----------------- DEFINICIÓN DE IDIOMA ----------------------
+// Recurso original:
+// http://reviblog.net/2014/01/07/jquery-ui-datepicker-poner-el-calendario-en-espanol-euskera-o-cualquier-otro-idioma/
 $.datepicker.regional['es'] = {
   closeText: 'Cerrar',
   prevText: '<Ant',
@@ -18,6 +21,15 @@ $.datepicker.regional['es'] = {
 
 $.datepicker.setDefaults($.datepicker.regional['es']);
 
-$(function () {
-  $("#fecha").datepicker();
+// ----------------- CREACIÓN DE DATEPICKER DE PRUEBA----------------------
+$(function() {
+    $("#nuestrodatepicker").datepicker();
+}
+
+
+// ----------------- DEFINICIÓN DE FORMATO ----------------------
+// Recurso original:
+// http://www.backtheweb.com/jquery/como-dar-formato-a-la-fecha-del-datepicker-de-jquery/
+$(function() {
+    $('#nuestrodatepicker').datepicker('option', {dateFormat: 'dd/mm/yy'});
 });
